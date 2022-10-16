@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Proyecto integrador TM</string>
+    <string name="tvLoginText">LOGIN</string>
+    <string name="etEmailHint">Email</string>
+    <string name="etUsernameHint">Nombre de usuario</string>
+    <string name="etPasswordHint">Password</string>
+    <string name="tvForgotPasswordText">Olvidaste la password?</string>
 </resources>
