@@ -8,6 +8,9 @@
     <string name="tvForgotPasswordText">Olvidaste la password?</string>
     <string name="tvAlreadyAUser">Ya estas registrado? Inicia sesion</string>
 
-    <string name="navigation_drawer_open" >Open</string>
-    <string name="navigation_drawer_close" >Close</string>
+    <!--Home screen titles-->
+    <string name="shoesTitle">Zapatillas</string>
+    <string name="shirtsTitle">Remeras</string>
+    <string name="pantsTitle">Pantalones</string>
+    <string name="jacketTitle">Camperas</string>
 </resources>
