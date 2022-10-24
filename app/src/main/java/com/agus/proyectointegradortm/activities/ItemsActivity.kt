@@ -14,6 +14,7 @@ import com.agus.proyectointegradortm.databinding.ActivityItemsBinding
 import com.agus.proyectointegradortm.models.Product
 import com.agus.proyectointegradortm.providers.ShirtProvider
 import com.agus.proyectointegradortm.providers.ShoeProvider
+import com.google.android.material.snackbar.Snackbar
 
 class ItemsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityItemsBinding
@@ -47,6 +48,12 @@ class ItemsActivity : AppCompatActivity() {
 
         adapter.onItemClick = {
             Toast.makeText(this, it.title, Toast.LENGTH_SHORT).show()
+        }
+
+        // Floating action button
+        val floatingActionButton = binding.fabShoppingCart
+        floatingActionButton.setOnClickListener {
+            Snackbar.make(binding.root, "El carrito se implementara pronto!", Snackbar.LENGTH_SHORT).show()
         }
 
     }
