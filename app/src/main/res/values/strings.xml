@@ -13,4 +13,9 @@
     <string name="shirtsTitle">Remeras</string>
     <string name="pantsTitle">Pantalones</string>
     <string name="jacketTitle">Camperas</string>
+
+    <!--Cart screen titles-->
+    <string name="fabPayTitle">Pagar ahora</string>
+    <string name="btnDeleteText">Eliminar</string>
+
 </resources>
