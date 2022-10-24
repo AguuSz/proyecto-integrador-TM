@@ -1,14 +1,17 @@
 package com.agus.proyectointegradortm.activities
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.agus.proyectointegradortm.adapters.TypesAdapter
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityHomeBinding
 import com.google.android.material.navigation.NavigationView
@@ -38,6 +41,19 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         navView = binding.navView
         navView.setNavigationItemSelectedListener(this)
+
+        // Recycler view con los 5 items
+        val recyclerView: RecyclerView = binding.rvItemTypes
+        val adapter = TypesAdapter()
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+
+        adapter.onItemClick = {
+            val intent = Intent(this, ItemsActivity::class.java)
+            intent.putExtra("type", it)
+            startActivity(intent)
+        }
     }
 
     // Funcion para cuando se elige un elemento

@@ -16,4 +16,16 @@
         app:menu="@menu/activity_main_drawer"
         app:headerLayout="@layout/nav_header_main"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItemTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
 </androidx.drawerlayout.widget.DrawerLayout>
