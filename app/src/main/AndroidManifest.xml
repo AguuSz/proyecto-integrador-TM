@@ -16,6 +16,7 @@
         <activity
             android:name=".activities.HomeActivity"
             android:exported="true">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -58,6 +59,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- CartScreen -->
+        <activity
+            android:name=".activities.CartActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.HomeActivity">
+
         </activity>
     </application>
 
