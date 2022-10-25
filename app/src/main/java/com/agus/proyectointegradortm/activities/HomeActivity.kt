@@ -54,6 +54,11 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             intent.putExtra("type", it)
             startActivity(intent)
         }
+
+        binding.fabShoppingCart.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Funcion para cuando se elige un elemento
