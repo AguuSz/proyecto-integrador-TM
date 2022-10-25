@@ -20,10 +20,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/black" />
         <LinearLayout
+            android:id="@+id/ivProfileFields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
+            android:padding="0dp"
             app:layout_constraintTop_toBottomOf="@+id/ivProfileImage">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -92,6 +93,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            app:layout_constraintTop_toBottomOf="@+id/ivProfileFields"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Guardar"
+            app:layout_anchorGravity="bottom|right|end"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
