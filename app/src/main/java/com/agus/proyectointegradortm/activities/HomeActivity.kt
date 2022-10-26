@@ -56,8 +56,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         binding.fabShoppingCart.setOnClickListener {
-            val intent = Intent(this, CartActivity::class.java)
-            startActivity(intent)
+            goTo(CartActivity::class.java)
         }
     }
 
@@ -65,8 +64,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.historyOption -> Toast.makeText(this, "History option", Toast.LENGTH_SHORT).show()
-            R.id.myProfileOption -> Toast.makeText(this, "My profile option", Toast.LENGTH_SHORT).show()
-            R.id.settingsOption -> Toast.makeText(this, "Settings option", Toast.LENGTH_SHORT).show()
+            R.id.myProfileOption -> goTo(ProfileActivity::class.java)
+            R.id.settingsOption -> goTo(SettingsActivity::class.java)
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
@@ -94,6 +93,11 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    fun goTo(activity: Class<*>) {
+        val intent = Intent(this, activity)
+        startActivity(intent)
     }
 
     // Se sobreescribe el metodo para cerrar la aplicacion
