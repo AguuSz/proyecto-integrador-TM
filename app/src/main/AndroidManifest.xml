@@ -29,7 +29,11 @@
         <activity
             android:name=".activities.SplashScreenActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!--LoginScreen-->
         <activity
@@ -64,12 +68,11 @@
             android:name=".activities.HistoryActivity"
             android:exported="true"
             android:parentActivityName=".activities.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <!-- ForgotPasswordScreen -->
+        <activity
+            android:name=".activities.ForgotPasswordScreen"
+            android:exported="true"
+            android:parentActivityName=".activities.LoginActivity">
         </activity>
     </application>
-
 </manifest>
