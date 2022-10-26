@@ -17,6 +17,7 @@ import com.agus.proyectointegradortm.utils.Communicator
 class ItemsActivity : AppCompatActivity(), Communicator {
     private lateinit var binding: ActivityItemsBinding
     private var isDetailShown: Boolean = false
+    private lateinit var productListFragment: ProductListFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +31,7 @@ class ItemsActivity : AppCompatActivity(), Communicator {
             actionBar?.title = title
         }
 
-        val productListFragment = ProductListFragment()
+        productListFragment = ProductListFragment()
         supportFragmentManager.beginTransaction().replace(binding.fragmentItems.id, productListFragment).commit()
     }
 
@@ -81,12 +82,10 @@ class ItemsActivity : AppCompatActivity(), Communicator {
 
             // Cuando el texto va cambiando
             override fun onQueryTextChange(newText: String?): Boolean {
-//                val productListFiltered = productList.filter { product -> product.title.contains(newText.toString()) }
-//                adapter.updateProductList(productListFiltered)
+                productListFragment.onQueryChange(newText.toString())
                 return false
             }
         })
-
         return true
     }
 }

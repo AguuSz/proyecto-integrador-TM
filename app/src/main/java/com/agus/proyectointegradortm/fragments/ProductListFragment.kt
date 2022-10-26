@@ -13,7 +13,8 @@ import com.agus.proyectointegradortm.providers.ShoeProvider
 import com.agus.proyectointegradortm.utils.Communicator
 import com.google.android.material.snackbar.Snackbar
 
-class ProductListFragment : Fragment(), ProductsAdapter.ProductListOnClickListener {
+class ProductListFragment() :
+    Fragment(), ProductsAdapter.ProductListOnClickListener {
 
     private var _binding: FragmentProductListBinding? = null
     private val binding get() = _binding!!
@@ -21,10 +22,6 @@ class ProductListFragment : Fragment(), ProductsAdapter.ProductListOnClickListen
     private lateinit var adapter: ProductsAdapter
     private lateinit var productList: MutableList<Product>
     private lateinit var communicator: Communicator
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -55,7 +52,8 @@ class ProductListFragment : Fragment(), ProductsAdapter.ProductListOnClickListen
         // Floating action button
         val floatingActionButton = binding.fabShoppingCart
         floatingActionButton.setOnClickListener {
-            Snackbar.make(binding.root, "El carrito se implementara pronto!", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, "El carrito se implementara pronto!", Snackbar.LENGTH_SHORT)
+                .show()
         }
 
         return binding.root
@@ -70,4 +68,11 @@ class ProductListFragment : Fragment(), ProductsAdapter.ProductListOnClickListen
         val selectedProduct = productList[position]
         communicator.passDataCom(selectedProduct)
     }
+
+    fun onQueryChange(query: String) {
+        val productListFiltered =
+            productList.filter { product -> product.title.contains(query.toString()) }
+        adapter.updateProductList(productListFiltered)
+    }
+
 }
