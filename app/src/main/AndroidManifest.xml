@@ -47,11 +47,18 @@
             android:name=".activities.SettingsActivity"
             android:exported="true"
             android:parentActivityName=".activities.HomeActivity">
+        </activity>
+        <!--ProfileScreen-->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
         <!-- CartScreen -->
         <activity
             android:name=".activities.CartActivity"
