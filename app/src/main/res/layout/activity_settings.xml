@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
 
     <ImageView
         android:id="@+id/ivSettingsIcon"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/settings"
@@ -16,7 +18,7 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:rowCount="2"
         android:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent">
