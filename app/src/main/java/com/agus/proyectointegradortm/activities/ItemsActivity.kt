@@ -5,21 +5,20 @@ import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.widget.SearchView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
 import com.agus.proyectointegradortm.R
-import com.agus.proyectointegradortm.adapters.ProductsAdapter
 import com.agus.proyectointegradortm.databinding.ActivityItemsBinding
+import com.agus.proyectointegradortm.fragments.ProductDetailFragment
+import com.agus.proyectointegradortm.fragments.ProductListFragment
 import com.agus.proyectointegradortm.models.Product
-import com.agus.proyectointegradortm.providers.ShirtProvider
-import com.agus.proyectointegradortm.providers.ShoeProvider
-import com.google.android.material.snackbar.Snackbar
+import com.agus.proyectointegradortm.utils.Communicator
 
-class ItemsActivity : AppCompatActivity() {
+class ItemsActivity : AppCompatActivity(), Communicator {
     private lateinit var binding: ActivityItemsBinding
-    private lateinit var productList: MutableList<Product>
-    private lateinit var adapter: ProductsAdapter
+    private var isDetailShown: Boolean = false
+    private lateinit var productListFragment: ProductListFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityItemsBinding.inflate(layoutInflater)
@@ -32,31 +31,36 @@ class ItemsActivity : AppCompatActivity() {
             actionBar?.title = title
         }
 
-        val recyclerView = binding.rvProducts
-
-        // TODO: Cambiar esto por cada uno de los diferentes providers dependiendo del tipo de producto
-        productList = when (title) {
-            "Zapatillas" -> ShoeProvider.shoeList.toMutableList()
-            "Remeras" -> ShirtProvider.shirtList.toMutableList()
-
-            else -> {ShoeProvider.shoeList.toMutableList()}
-        }
-        adapter = ProductsAdapter(productList)
-
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
-
-        adapter.onItemClick = {
-            Toast.makeText(this, it.title, Toast.LENGTH_SHORT).show()
-        }
-
-        // Floating action button
-        val floatingActionButton = binding.fabShoppingCart
-        floatingActionButton.setOnClickListener {
-            Snackbar.make(binding.root, "El carrito se implementara pronto!", Snackbar.LENGTH_SHORT).show()
-        }
-
+        productListFragment = ProductListFragment()
+        supportFragmentManager.beginTransaction().replace(binding.fragmentItems.id, productListFragment).commit()
     }
+
+    override fun passDataCom(product: Product) {
+        val bundle = Bundle()
+        bundle.putParcelable("selectedProduct", product)
+
+        val productDetailFragment = ProductDetailFragment()
+        productDetailFragment.arguments = bundle
+        replaceFragment(productDetailFragment)
+        isDetailShown = true
+    }
+
+    override fun onBackPressed() {
+        if (isDetailShown) {
+            val productDetailFragment = ProductListFragment()
+            replaceFragment(productDetailFragment)
+            isDetailShown = false
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    fun replaceFragment(fragment: Fragment) {
+        val transaction = this.supportFragmentManager.beginTransaction()
+        transaction.replace(binding.fragmentItems.id, fragment)
+        transaction.commit()
+    }
+
 
     // Funcion encargada de manejar el icono de busqueda
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -78,12 +82,10 @@ class ItemsActivity : AppCompatActivity() {
 
             // Cuando el texto va cambiando
             override fun onQueryTextChange(newText: String?): Boolean {
-                val productListFiltered = productList.filter { product -> product.title.contains(newText.toString()) }
-                adapter.updateProductList(productListFiltered)
+                productListFragment.onQueryChange(newText.toString())
                 return false
             }
         })
-
         return true
     }
 }

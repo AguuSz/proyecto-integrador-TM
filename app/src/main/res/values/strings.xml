@@ -18,4 +18,9 @@
     <string name="fabPayTitle">Pagar ahora</string>
     <string name="btnDeleteText">Eliminar</string>
 
+    <string name="addToCart">Añadir al carrito</string>
+    <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mattis augue. In ut ante dignissim, viverra ligula vitae, ultricies ante. Phasellus et leo sit amet nulla rutrum egestas. Nunc ornare sapien nec rutrum finibus. Aliquam vulputate mi congue massa ultricies, a elementum erat lacinia. Nullam egestas arcu nec placerat laoreet. Morbi mollis nec leo et hendrerit. Sed et metus id nisi iaculis aliquet. Ut sit amet est leo.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
