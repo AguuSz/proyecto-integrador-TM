@@ -63,7 +63,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // Funcion para cuando se elige un elemento
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.historyOption -> Toast.makeText(this, "History option", Toast.LENGTH_SHORT).show()
+            R.id.historyOption -> goTo(HistoryActivity::class.java)
             R.id.myProfileOption -> goTo(ProfileActivity::class.java)
             R.id.settingsOption -> goTo(SettingsActivity::class.java)
         }
