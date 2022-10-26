@@ -75,5 +75,11 @@
             android:exported="true"
             android:parentActivityName=".activities.LoginActivity">
         </activity>
+        <!-- OrderScreen -->
+        <activity
+            android:name=".activities.OrderActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.HomeActivity">
+        </activity>
     </application>
 </manifest>

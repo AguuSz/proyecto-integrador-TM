@@ -66,6 +66,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.historyOption -> goTo(HistoryActivity::class.java)
             R.id.myProfileOption -> goTo(ProfileActivity::class.java)
             R.id.settingsOption -> goTo(SettingsActivity::class.java)
+            R.id.orderOption -> goTo(OrderActivity::class.java)
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
