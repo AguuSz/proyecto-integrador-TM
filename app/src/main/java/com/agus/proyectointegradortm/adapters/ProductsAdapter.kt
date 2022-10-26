@@ -9,9 +9,7 @@ import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ProductElementBinding
 import com.agus.proyectointegradortm.models.Product
 
-class ProductsAdapter (private var productList: List<Product>): RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
-
-    var onItemClick: ((Product) -> Unit)? = null
+class ProductsAdapter (private var productList: List<Product>, private val listener: ProductListOnClickListener): RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.product_element, viewGroup, false)
@@ -24,10 +22,6 @@ class ProductsAdapter (private var productList: List<Product>): RecyclerView.Ada
 
         val priceText = "$ " + productList[i].price.toString()
         viewHolder.productPrice.text = priceText
-
-        viewHolder.itemView.setOnClickListener {
-            onItemClick?.invoke(productList[i])
-        }
     }
 
     override fun getItemCount(): Int {
@@ -49,7 +43,14 @@ class ProductsAdapter (private var productList: List<Product>): RecyclerView.Ada
         init {
             productTitle = binding.tvProductTitle
             productPrice = binding.tvProductPrice
+            itemView.setOnClickListener{
+                listener.onItemClick(bindingAdapterPosition)
+            }
         }
+    }
+
+    interface ProductListOnClickListener {
+        fun onItemClick(position: Int)
     }
 
 }
