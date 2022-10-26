@@ -63,6 +63,11 @@
             android:exported="true"
             android:parentActivityName=".activities.HomeActivity">
         </activity>
+        <!-- HistoryScreen -->
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.HomeActivity">
         <!-- ForgotPasswordScreen -->
         <activity
             android:name=".activities.ForgotPasswordScreen"
@@ -70,5 +75,4 @@
             android:parentActivityName=".activities.LoginActivity">
         </activity>
     </application>
-
 </manifest>
