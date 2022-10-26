@@ -1,6 +1,5 @@
 package com.agus.proyectointegradortm.activities
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -27,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
             login(view, binding.etEmail.text, binding.etPassword.text)
         }
         binding.tvForgotPassword.setOnClickListener {
-//            goTo()
+            goTo(ForgotPasswordScreen::class.java)
         }
     }
 
@@ -45,14 +44,13 @@ class LoginActivity : AppCompatActivity() {
         }
 
         if (email.toString() == correctEmail && password.toString() == correctPassword) {
-//            goTo()
-            Snackbar.make(view, "Logueado correctamente", Snackbar.LENGTH_LONG).show()
+            goTo(HomeActivity::class.java)
         } else {
             Snackbar.make(view, "No existe una cuenta con esos datos", Snackbar.LENGTH_LONG).show()
         }
     }
 
-    fun goTo(activity: Class<Activity>) {
+    fun goTo(activity: Class<*>) {
         val intent = Intent(this, activity)
         startActivity(intent)
     }

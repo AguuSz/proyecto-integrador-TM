@@ -2,7 +2,7 @@
     <string name="app_name">Proyecto integrador TM</string>
     <string name="tvLoginText">LOGIN</string>
     <string name="tvRegisterText">REGISTER</string>
-    <string name="etEmailHint">Email</string>
+    <string name="etEmailHint">Ingresa tu email</string>
     <string name="etUsernameHint">Nombre de usuario</string>
     <string name="etPasswordHint">Password</string>
     <string name="tvForgotPasswordText">Olvidaste la password?</string>
@@ -20,7 +20,10 @@
 
     <string name="addToCart">Añadir al carrito</string>
     <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mattis augue. In ut ante dignissim, viverra ligula vitae, ultricies ante. Phasellus et leo sit amet nulla rutrum egestas. Nunc ornare sapien nec rutrum finibus. Aliquam vulputate mi congue massa ultricies, a elementum erat lacinia. Nullam egestas arcu nec placerat laoreet. Morbi mollis nec leo et hendrerit. Sed et metus id nisi iaculis aliquet. Ut sit amet est leo.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Forgot password screen titles-->
+    <string name="forgotPasswordTitle">Haz olvidado la contraseña?</string>
+    <string name="btnSubmitText">Enviar</string>
+    <string name="toLoginText">Volver al login</string>
 
 </resources>
