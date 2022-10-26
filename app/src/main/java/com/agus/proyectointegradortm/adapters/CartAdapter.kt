@@ -9,14 +9,11 @@ import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ProductElementBinding
 import com.agus.proyectointegradortm.models.Product
 
-class ProductsAdapter(
-    private var productList: List<Product>,
-    private val listener: ProductListOnClickListener
-) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
+class CartAdapter (private var productList: List<Product>): RecyclerView.Adapter<CartAdapter.ViewHolder>() {
+    var onItemClick: ((Product) -> Unit)? = null
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        val v = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.product_element, viewGroup, false)
+        val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.cart_element, viewGroup, false)
         return ViewHolder(v)
     }
 
@@ -26,6 +23,10 @@ class ProductsAdapter(
 
         val priceText = "$ " + productList[i].price.toString()
         viewHolder.productPrice.text = priceText
+
+        viewHolder.itemView.setOnClickListener {
+            onItemClick?.invoke(productList[i])
+        }
     }
 
     override fun getItemCount(): Int {
@@ -37,7 +38,7 @@ class ProductsAdapter(
         notifyDataSetChanged()
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val binding = ProductElementBinding.bind(itemView)
 
         var productTitle: TextView
@@ -47,14 +48,7 @@ class ProductsAdapter(
         init {
             productTitle = binding.tvProductTitle
             productPrice = binding.tvProductPrice
-            itemView.setOnClickListener {
-                listener.onItemClick(bindingAdapterPosition)
-            }
         }
-    }
-
-    interface ProductListOnClickListener {
-        fun onItemClick(position: Int)
     }
 
 }
