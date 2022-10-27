@@ -9,163 +9,163 @@ class JacketProvider {
             // CAMPERAS DEL 301 - 400
             Product(
                 301,
-                "JACKET TEST",
+                "Men’s ThermoBall™ Eco Jacket 2.0",
                 "Descripcion generica",
                 175,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QAZ_682_hero?"
             ),
             Product(
                 302,
-                "Jordan 1 Low",
+                "Men’s Printed 1996 Retro Nuptse Jacket",
                 "Descripcion generica",
                 120,
-                "shoe",
-                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1a81f347/products/NI_553558-030/NI_553558-030-1.JPG"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A5IX4_94B_hero?"
             ),
             Product(
                 303,
-                "Air Force 1",
+                "Men’s Hydrenalite™ Down Hoodie",
                 "Descripcion generica",
                 120,
-                "shoe",
-                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8abed4db/products/NI_315115-112/NI_315115-112-1.JPG"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A4QX5_78M_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 304,
-                "SB Dunk",
+                "Men’s Aconcagua 2 Hoodie",
                 "Descripcion generica",
                 175,
-                "shoe",
-                "https://media.revistagq.com/photos/5f3d384c64de88802df65029/master/w_1600%2Cc_limit/nike-sb-dunk-low-j-pack-chicago-release-info-1.jpg"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A4R26_HDC_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 305,
-                "Vans Classic",
+                "Men’s Denali Jacket",
                 "Descripcion generica",
                 100,
-                "shoe",
-                "https://images.stockx.com/images/Vans-Slip-On-Classic-Canvas-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1637178611"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UR2_DYY_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 306,
-                "Jordan 4 Retro SE",
+                "Men’s Denali Anorak",
                 "Descripcion generica",
                 200,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-SE-Black-Canvas-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1664433335&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UR3_6R7_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 307,
-                "Jordan 4 Retro Canyon Purple (W)",
+                "Men’s Belleview Stretch Down Shacket",
                 "Descripcion generica",
                 100,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-Canyon-Purple-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1660285854"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UJG_JK3_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 308,
-                "Jordan 4 Retro Starfish (W)",
+                "Men’s Aconcagua 2 Jacket",
                 "Descripcion generica",
                 180,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-Starfish-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611766779"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A5GLJ_37U_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 309,
-                "Jordan 1 Retro Low OG Black Dark Powder Blue",
+                "Men’s 1996 Retro Nuptse Jacket",
                 "Descripcion generica",
                 120,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-UNC-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1659334953&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A3C8D_ZSF_hero?"
             ),
             Product(
                 310,
-                "Jordan 1 Retro High OG Dark Marina Blue",
+                "Men’s 86 Retro Mountain Jacket",
                 "Descripcion generica",
                 190,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Dark-Marina-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1642023273"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UR9_6S2_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 311,
-                "Adidas Yeezy Boost 350 V2",
+                "Men’s ThermoBall™ Super Jacket",
                 "Descripcion generica",
                 300,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zyon-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606325931&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UR9_748_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 312,
-                "Nike Dunk Low Retro",
+                "Men’s ThermoBall™ Eco Hoodie 2.0",
                 "Descripcion generica",
                 170,
-                "shoe",
-                "https://images.stockx.com/images/Nike-Dunk-Low-White-Black-2021-W-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1611766850&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UUT_99M_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 313,
-                "Jordan 1 Mid Light Smoke Grey",
+                "Men’s ThermoBall™ 50/50 Jacket",
                 "Descripcion generica",
                 135,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Mid-Light-Smoke-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606319491"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UL7_HDC_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 314,
-                "Adidas Yeezy Boost 350 V2",
+                "Men’s Printed Hydrenalite™ Down Hoodie",
                 "Descripcion generica",
                 140,
-                "shoe",
-                "https://images.stockx.com/images/Adidas-Yeezy-Boost-350-V2-Core-Black-Red-2017-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606320792&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A5IXJ_98X_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 315,
-                "Adidas Yeezy Boost 700",
+                "Men’s 1996 Retro Nuptse Vest",
                 "Descripcion generica",
                 350,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1628533740"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A3JQQ_HDC_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 316,
-                "Nike Dunk Low Retro PRM",
+                "Men’s Denali Vest",
                 "Descripcion generica",
                 400,
-                "shoe",
-                "https://images.stockx.com/images/Nike-Dunk-Low-Swoosh-Shadow-Iron-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1666081545&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UR4_JK3_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 317,
-                "Adidas Campus 80s",
+                "Men’s Canyonlands Hoodie",
                 "Descripcion generica",
                 300,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Campus-80s-South-Park-Towelie-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1619198945"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A5G9U_HKW_hero?hei=650&wid=555&qlt=50&resMode=sharp2&op_sum=0.9,1.0,8,0"
             ),
             Product(
                 318,
-                "Nike Dunk High PRM Somos Familia",
+                "Men’s ThermoBall™ Hybrid Eco Jacket 2.0",
                 "Descripcion generica",
                 150,
-                "shoe",
-                "https://images.stockx.com/images/Nike-Dunk-High-PRM-Somos-Familia.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1665649075&q=75"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QAZ_JK3_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 319,
-                "Adidas Yeezy 700 V3 Dark Glow",
+                "Men’s ThermoBall™ Eco Vest 2.0",
                 "Descripcion generica",
                 200,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Yeezy-700-V3-Blue-Glow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1628537919"
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A5GLC_HDC_hero?wid=780&hei=906&fmt=jpeg&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
             ),
             Product(
                 320,
-                "Crocs Classic Clog Lightning McQueen",
+                "Men’s Mountain Sweatshirt Hoodie\n",
                 "Descripcion generica",
-                999,
-                "shoe",
-                "https://images.stockx.com/images/Crocs-Classic-Clog-Lightning-McQueen-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1620405722&q=75"
+                170,
+                "jacket",
+                "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7UPW_84Z_hero?"
             ),
 
             )
