@@ -31,7 +31,8 @@ class ProductDetailFragment : Fragment() {
 
         binding.tvProductTitle.text = selectedProduct?.title
         binding.tvProductDescription.text = selectedProduct?.description
-        binding.tvProductPrice.text = selectedProduct?.price.toString()
+        val price = "$ " + selectedProduct?.price.toString()
+        binding.tvProductPrice.text = price
         if (container != null) {
             Glide.with(container.context).load(selectedProduct?.imageURL).into(binding.ivProductImage)
         }

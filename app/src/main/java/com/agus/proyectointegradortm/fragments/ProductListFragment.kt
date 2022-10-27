@@ -1,6 +1,7 @@
 package com.agus.proyectointegradortm.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,9 +32,8 @@ class ProductListFragment() :
 
         _binding = FragmentProductListBinding.inflate(inflater, container, false)
 
-        productList = ShoeProvider.shoeList.toMutableList()
-        var title = arguments?.getString("title")
-        var productList = when (title) {
+        val title = arguments?.getString("title")
+        productList = when (title) {
             "Zapatillas" -> ShoeProvider.shoeList.toMutableList()
             "Remeras" -> ShirtProvider.shirtList.toMutableList()
             "Pantalones" -> PantProvider.pantList.toMutableList()
@@ -66,6 +66,7 @@ class ProductListFragment() :
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        productList.clear()
     }
 
     override fun onItemClick(position: Int) {

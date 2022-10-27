@@ -5,165 +5,167 @@ import com.agus.proyectointegradortm.models.Product
 class HoodieProvider {
     companion object {
         val hoodieList = listOf<Product>(
+
+            // CAMPERAS DEL 401 - 500
             Product(
-                1,
-                "AAAA",
+                401,
+                "DARE MOREHOONAVS",
                 "Descripcion generica",
                 175,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/Dragon-Hoodie-Dark-Grey_x600.jpg?v=1641317553"
             ),
             Product(
-                2,
-                "Jordan 1 Low",
+                402,
+                "Chill More Unisex Hoodie",
                 "Descripcion generica",
                 120,
                 "hoddie",
-                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1a81f347/products/NI_553558-030/NI_553558-030-1.JPG"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/sloth-hoodie-grey_1024x1024.jpg?v=1559364745"
             ),
             Product(
-                3,
-                "Air Force 1",
+                403,
+                "CLIMATE CHANGE IS REAL",
                 "Descripcion generica",
                 120,
                 "hoddie",
-                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8abed4db/products/NI_315115-112/NI_315115-112-1.JPG"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/Climate-change-hoodie-blue_1024x1024.jpg?v=1559139380"
             ),
             Product(
-                4,
-                "SB Dunk",
+                404,
+                "Fear Less Dare More Unisex Hoodie",
                 "Descripcion generica",
                 175,
                 "hoddie",
-                "https://media.revistagq.com/photos/5f3d384c64de88802df65029/master/w_1600%2Cc_limit/nike-sb-dunk-low-j-pack-chicago-release-info-1.jpg"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/dare-hoodie-navy.jpg?v=1559364798"
             ),
             Product(
-                5,
-                "Vans Classic",
+                405,
+                "Wish More Unisex Hoodie",
                 "Descripcion generica",
                 100,
                 "hoddie",
-                "https://images.stockx.com/images/Vans-Slip-On-Classic-Canvas-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1637178611"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/dandelion-hoodie-navy.jpg?v=1559711625"
             ),
             Product(
-                6,
-                "Jordan 4 Retro SE",
+                406,
+                "Unicorn Unisex Hoodie",
                 "Descripcion generica",
                 200,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-SE-Black-Canvas-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1664433335&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/unicorn-hoodie-navy_1024x1024@2x.jpg?v=1559711623"
             ),
             Product(
-                7,
-                "Jordan 4 Retro Canyon Purple (W)",
+                407,
+                "ELEPHANT HOOECBLKS",
                 "Descripcion generica",
                 100,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-Canyon-Purple-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1660285854"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/Elephant-Hoodie-Dark-Gray_1024x1024.jpg?v=1559139437"
             ),
             Product(
-                8,
-                "Jordan 4 Retro Starfish (W)",
+                408,
+                "DO MORE HOOPCBS",
                 "Descripcion generica",
                 180,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-Starfish-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611766779"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/unique-hoodie-Blue_530x@2x.jpg?v=1559159479"
             ),
             Product(
-                9,
-                "Jordan 1 Retro Low OG Black Dark Powder Blue",
+                409,
+                "Breathe More Unisex Hoodie",
                 "Descripcion generica",
                 120,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-UNC-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1659334953&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/yoga-hoodie-navy.jpg?v=1559364742"
             ),
             Product(
-                10,
-                "Jordan 1 Retro High OG Dark Marina Blue",
+                410,
+                "Recycle More Unisex Hoodie",
                 "Descripcion generica",
                 190,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Dark-Marina-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1642023273"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/recycle-symbol-hoodie-dark-gray_1024x1024.jpg?v=1559364892"
             ),
             Product(
-                11,
-                "Adidas Yeezy Boost 350 V2",
+                411,
+                "Majestic Dragon Unisex Sweatshirt",
                 "Descripcion generica",
                 300,
                 "hoddie",
-                "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zyon-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606325931&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/dragon-raglan-pullover-green_1024x1024@2x.jpg?v=1559139454"
             ),
             Product(
-                12,
-                "Nike Dunk Low Retro",
+                412,
+                "ANCIENT DRAGON Unisex Sweatshirt",
                 "Descripcion generica",
                 170,
                 "hoddie",
-                "https://images.stockx.com/images/Nike-Dunk-Low-White-Black-2021-W-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1611766850&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/Dragon-Raglan-Sweatshirt-Blue_x600.jpg?v=1641316326"
             ),
             Product(
-                13,
-                "Jordan 1 Mid Light Smoke Grey",
+                413,
+                "Rock More Raglan Sweatshirt",
                 "Descripcion generica",
                 135,
                 "hoddie",
-                "https://images.stockx.com/images/Air-Jordan-1-Mid-Light-Smoke-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606319491"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/rock-n-roll-hoodie-blue_1024x1024.jpg?v=1565020136"
             ),
             Product(
-                14,
-                "Adidas Yeezy Boost 350 V2",
+                414,
+                "Nevertheless She Persisted Unisex Hoodie",
                 "Descripcion generica",
                 140,
                 "hoddie",
-                "https://images.stockx.com/images/Adidas-Yeezy-Boost-350-V2-Core-Black-Red-2017-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606320792&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/nevertheless-hoodie-navy_1024x1024.jpg?v=1559364879"
             ),
             Product(
-                15,
-                "Adidas Yeezy Boost 700",
+                415,
+                "The Magnificent - Mermaid Unisex Hoodie",
                 "Descripcion generica",
                 350,
                 "hoddie",
-                "https://images.stockx.com/images/adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1628533740"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/mermaid-hoodie-dark-grey.jpg?v=1559711617"
             ),
             Product(
-                16,
-                "Nike Dunk Low Retro PRM",
+                416,
+                "Peace Love & Unity Unisex Hoodie",
                 "Descripcion generica",
                 400,
                 "hoddie",
-                "https://images.stockx.com/images/Nike-Dunk-Low-Swoosh-Shadow-Iron-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1666081545&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/unity-hoodie-gray.jpg?v=1559364887"
             ),
             Product(
-                17,
-                "Adidas Campus 80s",
+                417,
+                "Sing More Unisex Hoodie",
                 "Descripcion generica",
                 300,
                 "hoddie",
-                "https://images.stockx.com/images/adidas-Campus-80s-South-Park-Towelie-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1619198945"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/chicken-hoodie-grey_1024x1024@2x.jpg?v=1559711613"
             ),
             Product(
-                18,
-                "Nike Dunk High PRM Somos Familia",
+                418,
+                "French Bulldog Unisex Hoodie",
                 "Descripcion generica",
                 150,
                 "hoddie",
-                "https://images.stockx.com/images/Nike-Dunk-High-PRM-Somos-Familia.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1665649075&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/French-Bulldog-Hoodie-dark-gray.jpg?v=1560313744"
             ),
             Product(
-                19,
-                "Adidas Yeezy 700 V3 Dark Glow",
+                419,
+                "Grow More Unisex Hoodie",
                 "Descripcion generica",
                 200,
                 "hoddie",
-                "https://images.stockx.com/images/adidas-Yeezy-700-V3-Blue-Glow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1628537919"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/grow-hoodie-gray_1024x1024.jpg?v=1560745453"
             ),
             Product(
-                20,
-                "Crocs Classic Clog Lightning McQueen",
+                420,
+                "DANCE MORE",
                 "Descripcion generica",
-                999,
+                170,
                 "hoddie",
-                "https://images.stockx.com/images/Crocs-Classic-Clog-Lightning-McQueen-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1620405722&q=75"
+                "https://cdn.shopify.com/s/files/1/0236/2203/products/Dancer-Hoodie-Navy_x600.jpg?v=1641317467"
             ),
 
             )
