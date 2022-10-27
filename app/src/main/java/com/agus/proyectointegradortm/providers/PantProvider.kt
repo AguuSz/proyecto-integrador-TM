@@ -9,163 +9,163 @@ class PantProvider {
             // PANTALONES DEL 201 - 300
             Product(
                 201,
-                "PANT TEST",
+                "Pyrite Slim Fit Pocket Joggers",
                 "Descripcion generica",
                 175,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/d7e22c74-3cf7-4f36-9482-ab2ffe5349f4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 202,
-                "Jordan 1 Low",
+                "Sunday Performance Jogger Sweatpants",
                 "Descripcion generica",
                 120,
-                "shoe",
-                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1a81f347/products/NI_553558-030/NI_553558-030-1.JPG"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/4414f97d-cadf-41a4-ba5b-9aa8e5a0a580.jpeg?q=45&dpr=2&h=365.31&w=230"
             ),
             Product(
                 203,
-                "Air Force 1",
+                "Essentials Cotton Blend Sweatpants",
                 "Descripcion generica",
                 120,
-                "shoe",
-                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8abed4db/products/NI_315115-112/NI_315115-112-1.JPG"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/7b5faf0c-8f8e-496e-bdb3-ec16ad0c592b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 204,
-                "SB Dunk",
+                "Harker Flat Front Solid Stretch Wool Dress Pants\n",
                 "Descripcion generica",
                 175,
-                "shoe",
-                "https://media.revistagq.com/photos/5f3d384c64de88802df65029/master/w_1600%2Cc_limit/nike-sb-dunk-low-j-pack-chicago-release-info-1.jpg"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/a3f88255-bfac-48e8-8e3f-a725c1350469.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 205,
-                "Vans Classic",
+                "Relaxed Sweatpants",
                 "Descripcion generica",
                 100,
-                "shoe",
-                "https://images.stockx.com/images/Vans-Slip-On-Classic-Canvas-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1637178611"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/3821bfea-0cb6-4e04-9d85-c584eca22978.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 206,
-                "Jordan 4 Retro SE",
+                "Sportswear Men's Club Pocket Fleece Joggers",
                 "Descripcion generica",
                 200,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-SE-Black-Canvas-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1664433335&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/80137954-feaa-4172-b644-26e58aa1de03.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 207,
-                "Jordan 4 Retro Canyon Purple (W)",
+                "Ponto Performance Pants",
                 "Descripcion generica",
                 100,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-Canyon-Purple-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1660285854"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/b6062019-6582-423c-8e20-210a78ddd6eb.jpeg?h=365&w=240&dpr=2"
             ),
             Product(
                 208,
-                "Jordan 4 Retro Starfish (W)",
+                "Milano Solid Wool Blend Flat Front Dress Pants",
                 "Descripcion generica",
                 180,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-4-Retro-Starfish-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611766779"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/f4c70f71-6358-40c6-9310-d5c5e4352474.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 209,
-                "Jordan 1 Retro Low OG Black Dark Powder Blue",
+                "PURPLE Blowout Slim Jeans",
                 "Descripcion generica",
                 120,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-UNC-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1659334953&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/94967737-7fbb-4ced-b166-def91aa898ce.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 210,
-                "Jordan 1 Retro High OG Dark Marina Blue",
+                "Essentials Sweatpants",
                 "Descripcion generica",
                 190,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Dark-Marina-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1642023273"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/a9d2cb95-6ec0-4824-8385-c41f9e1825ed.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 211,
-                "Adidas Yeezy Boost 350 V2",
+                "Stretch Weekday Warrior Slim Fit Dress Pants",
                 "Descripcion generica",
                 300,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zyon-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606325931&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/f553ea53-5fe2-4b95-917b-d1250db7c161.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 212,
-                "Nike Dunk Low Retro",
+                "Essentials Sweatpants",
                 "Descripcion generica",
                 170,
-                "shoe",
-                "https://images.stockx.com/images/Nike-Dunk-Low-White-Black-2021-W-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1611766850&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/96d4f35b-ceb1-4788-a87f-97b7fa26ddcb.jpeg?trim=color&pad_color=FFF&format=jpeg&w=350&h=536&trimcolor=FFF"
             ),
             Product(
                 213,
-                "Jordan 1 Mid Light Smoke Grey",
+                "Everett SUD Slim Straight Fit Pants",
                 "Descripcion generica",
                 135,
-                "shoe",
-                "https://images.stockx.com/images/Air-Jordan-1-Mid-Light-Smoke-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606319491"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/7e68ed17-88fd-40e2-bf3b-eb215d4a8326.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 214,
-                "Adidas Yeezy Boost 350 V2",
+                "Essentials Cotton Blend Sweatpants",
                 "Descripcion generica",
                 140,
-                "shoe",
-                "https://images.stockx.com/images/Adidas-Yeezy-Boost-350-V2-Core-Black-Red-2017-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1606320792&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/4689134a-1baa-42ec-9b29-1079b70badf6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 215,
-                "Adidas Yeezy Boost 700",
+                "Slim Fit CoolMax® Flat Front Performance Chinos",
                 "Descripcion generica",
                 350,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1628533740"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/abf42366-9b3f-4b70-a432-954ce9a8f3b6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 216,
-                "Nike Dunk Low Retro PRM",
+                "Cooper Five Pocket Straight Leg Pants",
                 "Descripcion generica",
                 400,
-                "shoe",
-                "https://images.stockx.com/images/Nike-Dunk-Low-Swoosh-Shadow-Iron-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1666081545&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/13cea272-dfae-420c-84a7-1baf63ab3387.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 217,
-                "Adidas Campus 80s",
+                "Meta Joggers",
                 "Descripcion generica",
                 300,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Campus-80s-South-Park-Towelie-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1619198945"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/f0167e3f-0cdd-4993-ac03-75953828cd3c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 218,
-                "Nike Dunk High PRM Somos Familia",
+                "Transcend Federal Men's Slim Straight Leg Jeans",
                 "Descripcion generica",
                 150,
-                "shoe",
-                "https://images.stockx.com/images/Nike-Dunk-High-PRM-Somos-Familia.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1665649075&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/a99d75be-425d-43de-833d-62aa6c264340.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
             Product(
                 219,
-                "Adidas Yeezy 700 V3 Dark Glow",
+                "Soft Twill Chinos",
                 "Descripcion generica",
                 200,
-                "shoe",
-                "https://images.stockx.com/images/adidas-Yeezy-700-V3-Blue-Glow-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1628537919"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/66cac355-572e-4a9e-806a-8784d6131054.jpeg?trim=color&pad_color=FFF&format=jpeg&w=350&h=536&trimcolor=FFF"
             ),
             Product(
                 220,
-                "Crocs Classic Clog Lightning McQueen",
+                "ICONS Fit 2 Authentic Stretch Slim Fit Jeans",
                 "Descripcion generica",
                 999,
-                "shoe",
-                "https://images.stockx.com/images/Crocs-Classic-Clog-Lightning-McQueen-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1620405722&q=75"
+                "pant",
+                "https://n.nordstrommedia.com/id/sr3/75af41d3-359b-4a2b-9129-47d87772279f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
             ),
 
             )
