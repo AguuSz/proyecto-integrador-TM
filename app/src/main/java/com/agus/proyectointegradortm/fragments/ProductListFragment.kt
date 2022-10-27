@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.agus.proyectointegradortm.adapters.ProductsAdapter
 import com.agus.proyectointegradortm.databinding.FragmentProductListBinding
 import com.agus.proyectointegradortm.models.Product
-import com.agus.proyectointegradortm.providers.ShoeProvider
+import com.agus.proyectointegradortm.providers.*
 import com.agus.proyectointegradortm.utils.Communicator
 import com.google.android.material.snackbar.Snackbar
 
@@ -32,14 +32,18 @@ class ProductListFragment() :
         _binding = FragmentProductListBinding.inflate(inflater, container, false)
 
         productList = ShoeProvider.shoeList.toMutableList()
-//        var productList = when (title) {
-//            "Zapatillas" -> ShoeProvider.shoeList.toMutableList()
-//            "Remeras" -> ShirtProvider.shirtList.toMutableList()
-//
-//            else -> {
-//                ShoeProvider.shoeList.toMutableList()
-//            }
-//        }
+        var title = arguments?.getString("title")
+        var productList = when (title) {
+            "Zapatillas" -> ShoeProvider.shoeList.toMutableList()
+            "Remeras" -> ShirtProvider.shirtList.toMutableList()
+            "Pantalones" -> PantProvider.pantList.toMutableList()
+            "Buzos" -> HoodieProvider.hoodieList.toMutableList()
+            "Camperas" -> JacketProvider.jacketList.toMutableList()
+
+            else -> {
+                ShoeProvider.shoeList.toMutableList()
+            }
+        }
 
         val recyclerView = binding.rvProducts
         adapter = ProductsAdapter(productList, this)

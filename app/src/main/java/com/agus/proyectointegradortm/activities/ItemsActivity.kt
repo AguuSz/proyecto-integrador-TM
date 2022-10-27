@@ -32,6 +32,9 @@ class ItemsActivity : AppCompatActivity(), Communicator {
         }
 
         productListFragment = ProductListFragment()
+        val bundle = Bundle()
+        bundle.putString("title", title)
+        productListFragment.arguments = bundle
         supportFragmentManager.beginTransaction().replace(binding.fragmentItems.id, productListFragment).commit()
     }
 
