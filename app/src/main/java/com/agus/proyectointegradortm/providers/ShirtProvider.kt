@@ -5,6 +5,8 @@ import com.agus.proyectointegradortm.models.Product
 class ShirtProvider {
     companion object {
         val shirtList = listOf<Product>(
+
+            // REMERAS DEL 101 - 200
             Product(
                 100,
                 "Remera blanca",

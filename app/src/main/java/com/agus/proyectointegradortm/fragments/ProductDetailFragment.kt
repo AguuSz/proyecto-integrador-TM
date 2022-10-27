@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.agus.proyectointegradortm.databinding.FragmentProductDetailBinding
 import com.agus.proyectointegradortm.models.Product
+import com.bumptech.glide.Glide
 
 class ProductDetailFragment : Fragment() {
 
@@ -30,7 +31,11 @@ class ProductDetailFragment : Fragment() {
 
         binding.tvProductTitle.text = selectedProduct?.title
         binding.tvProductDescription.text = selectedProduct?.description
-        binding.tvProductPrice.text = selectedProduct?.price.toString()
+        val price = "$ " + selectedProduct?.price.toString()
+        binding.tvProductPrice.text = price
+        if (container != null) {
+            Glide.with(container.context).load(selectedProduct?.imageURL).into(binding.ivProductImage)
+        }
 
         return binding.root
     }

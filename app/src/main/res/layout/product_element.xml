@@ -60,7 +60,6 @@
                     android:breakStrategy="high_quality"
                     android:text="Titulo del producto"
                     android:textColor="@color/black"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
                 <TextView

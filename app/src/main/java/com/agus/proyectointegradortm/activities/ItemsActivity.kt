@@ -3,6 +3,7 @@ package com.agus.proyectointegradortm.activities
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,7 @@ class ItemsActivity : AppCompatActivity(), Communicator {
     private lateinit var binding: ActivityItemsBinding
     private var isDetailShown: Boolean = false
     private lateinit var productListFragment: ProductListFragment
+    private lateinit var title: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +27,16 @@ class ItemsActivity : AppCompatActivity(), Communicator {
         setContentView(binding.root)
 
         // Seteamos el titulo de la activity con el tipo de producto que fue clickeado
-        val title = intent.getStringExtra("type")
+        title = intent.getStringExtra("type").toString()
         if (title != null) {
             val actionBar = supportActionBar
             actionBar?.title = title
         }
 
         productListFragment = ProductListFragment()
+        val bundle = Bundle()
+        bundle.putString("title", title)
+        productListFragment.arguments = bundle
         supportFragmentManager.beginTransaction().replace(binding.fragmentItems.id, productListFragment).commit()
     }
 
@@ -47,8 +52,7 @@ class ItemsActivity : AppCompatActivity(), Communicator {
 
     override fun onBackPressed() {
         if (isDetailShown) {
-            val productDetailFragment = ProductListFragment()
-            replaceFragment(productDetailFragment)
+            replaceFragment(productListFragment)
             isDetailShown = false
         } else {
             super.onBackPressed()
