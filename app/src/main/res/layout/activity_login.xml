@@ -43,20 +43,20 @@
             android:textAlignment="center"
             android:textColorHint="#c2c2c2" />
 
-        <LinearLayout
+        <CheckBox
+            android:id="@+id/cbKeepLoggedIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="25dp">
+            android:text="Mantener sesion iniciada?"
+            android:gravity="center" />
 
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/tvLoginText" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingHorizontal="50dp"
+            android:text="@string/tvLoginText" />
 
         <TextView
             android:id="@+id/tvForgotPassword"
