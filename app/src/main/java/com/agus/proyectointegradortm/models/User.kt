@@ -8,11 +8,15 @@ data class User(
     var userName: String,
     var userSurname: String,
     var email: String,
+    var password: String,
     var birthDate: String,
-    var address: String
+    var address: String,
+    var profileImage: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString()!!,
+        parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
@@ -26,8 +30,10 @@ data class User(
         parcel.writeString(userName)
         parcel.writeString(userSurname)
         parcel.writeString(email)
+        parcel.writeString(password)
         parcel.writeString(birthDate)
         parcel.writeString(address)
+        parcel.writeString(profileImage)
     }
 
     override fun describeContents(): Int {
@@ -43,5 +49,4 @@ data class User(
             return arrayOfNulls(size)
         }
     }
-
 }

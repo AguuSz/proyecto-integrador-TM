@@ -8,6 +8,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityLoginBinding
+import com.agus.proyectointegradortm.models.User
+import com.agus.proyectointegradortm.providers.UsersProvider
 import com.agus.proyectointegradortm.utils.Validator
 import com.google.android.material.snackbar.Snackbar
 
@@ -37,19 +39,24 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun login(view: ConstraintLayout, email: Editable, password: Editable) {
+        var user: User? = null
         if (email.isEmpty() || password.isEmpty()) {
             Snackbar.make(view, "Los datos no pueden estar vacios", Snackbar.LENGTH_LONG).show()
             return
         }
-
-        val correctEmail = "emailTest@asd.com"
-        val correctPassword = "asdasd123"
-
         if (!Validator.isAValidEmail(email.toString())) {
             Snackbar.make(view, "Email invalido", Snackbar.LENGTH_LONG).show()
+            return
         }
 
-        if (email.toString() == correctEmail && password.toString() == correctPassword) {
+        val userList = UsersProvider.userList
+        userList.forEach {
+            if (it.email == email.toString()) {
+                user = it
+            }
+        }
+
+        if (user != null && user!!.password == password.toString()) {
             if (binding.cbKeepLoggedIn.isChecked) {
                 MyApplication.preferences.setRemainingLogins(3)
             }
@@ -58,6 +65,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 MyApplication.preferences.setUserEmail("")
             }
+            MyApplication.preferences.setUserID(user!!.id)
             goTo(HomeActivity::class.java)
         } else {
             Snackbar.make(view, "No existe una cuenta con esos datos", Snackbar.LENGTH_LONG).show()
