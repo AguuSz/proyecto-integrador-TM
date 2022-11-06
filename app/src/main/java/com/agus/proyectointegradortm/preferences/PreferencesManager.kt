@@ -11,6 +11,15 @@ class PreferencesManager(context: Context) {
     private val KEY_USER_NAME = "USER_NAME"
     private val KEY_USER_EMAIL = "USER_EMAIL"
     private val KEY_REMAINING_LOGINS = "REMAINING_LOGINS"
+    private val KEY_USER_ID = "USER_ID"
+
+    fun setUserID(id: Int) {
+        preferences.edit().putInt(KEY_USER_ID, id).apply()
+    }
+
+    fun getUserID(): Int {
+        return preferences.getInt(KEY_USER_ID, 0)
+    }
 
     fun setUserName(userName: String) {
         preferences.edit().putString(KEY_USER_NAME, userName).apply()
