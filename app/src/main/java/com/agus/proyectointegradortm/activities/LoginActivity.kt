@@ -22,6 +22,11 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        // Seteamos el texto en caso de que el usuario haya elegido guardarla
+        val userEmail = MyApplication.preferences.getUserEmail()
+        if (userEmail != "")
+            binding.etEmail.setText(userEmail)
+
         // handleClickListeners
         binding.btnLogin.setOnClickListener {
             login(view, binding.etEmail.text, binding.etPassword.text)
@@ -47,6 +52,11 @@ class LoginActivity : AppCompatActivity() {
         if (email.toString() == correctEmail && password.toString() == correctPassword) {
             if (binding.cbKeepLoggedIn.isChecked) {
                 MyApplication.preferences.setRemainingLogins(3)
+            }
+            if (binding.cbRememberEmail.isChecked) {
+                MyApplication.preferences.setUserEmail(email.toString())
+            } else {
+                MyApplication.preferences.setUserEmail("")
             }
             goTo(HomeActivity::class.java)
         } else {
