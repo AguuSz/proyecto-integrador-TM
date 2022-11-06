@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navHeader"
     android:layout_width="match_parent"
     android:layout_height="160dp"
@@ -14,7 +16,7 @@
 
     <!--TODO: Cambiar el src por el icono del usuario-->
     <ImageView
-        android:id="@+id/ivNavHeader"
+        android:id="@+id/ivNavHeaderImage"
         android:src="@mipmap/ic_launcher"
         android:layout_width="64dp"
         android:layout_height="64dp" />

@@ -4,16 +4,21 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.agus.proyectointegradortm.adapters.TypesAdapter
+import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
+import com.agus.proyectointegradortm.adapters.TypesAdapter
 import com.agus.proyectointegradortm.databinding.ActivityHomeBinding
+import com.agus.proyectointegradortm.databinding.NavHeaderMainBinding
+import com.agus.proyectointegradortm.providers.UsersProvider
+import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -24,8 +29,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -39,8 +42,13 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         actionBarToggle.syncState()
 
+        val user = UsersProvider.getUserByID(MyApplication.preferences.getUserID())
         navView = binding.navView
         navView.setNavigationItemSelectedListener(this)
+        val headerView = navView.getHeaderView(0)
+        val headerBinding = NavHeaderMainBinding.bind(headerView)
+        Glide.with(view).load(user.profileImage).into(headerBinding.ivNavHeaderImage)
+        headerBinding.tvNavHeaderTitle.text = user.userName + " " + user.userSurname
 
         // Recycler view con los 5 items
         val recyclerView: RecyclerView = binding.rvItemTypes
@@ -58,6 +66,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.fabShoppingCart.setOnClickListener {
             goTo(CartActivity::class.java)
         }
+
+
     }
 
     // Funcion para cuando se elige un elemento
