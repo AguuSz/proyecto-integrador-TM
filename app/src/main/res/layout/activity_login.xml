@@ -65,6 +65,14 @@
             android:paddingHorizontal="50dp"
             android:text="@string/tvLoginText" />
 
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingHorizontal="50dp"
+            android:text="@string/tvRegisterText" />
+
         <TextView
             android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"

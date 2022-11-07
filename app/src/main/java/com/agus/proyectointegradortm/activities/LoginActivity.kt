@@ -3,18 +3,26 @@ package com.agus.proyectointegradortm.activities
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.GravityCompat
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityLoginBinding
 import com.agus.proyectointegradortm.models.User
 import com.agus.proyectointegradortm.providers.UsersProvider
 import com.agus.proyectointegradortm.utils.Validator
+import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var userViewModel: UserViewModel
+    private var userList = emptyList<User>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +31,11 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        userViewModel.getAllUsers.observe(this, Observer { users ->
+            userList = users
+        })
 
         // Seteamos el texto en caso de que el usuario haya elegido guardarla
         val userEmail = MyApplication.preferences.getUserEmail()
@@ -35,6 +48,9 @@ class LoginActivity : AppCompatActivity() {
         }
         binding.tvForgotPassword.setOnClickListener {
             goTo(ForgotPasswordScreen::class.java)
+        }
+        binding.btnRegister.setOnClickListener {
+            goTo(RegisterActivity::class.java)
         }
     }
 
@@ -49,7 +65,6 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        val userList = UsersProvider.userList
         userList.forEach {
             if (it.email == email.toString()) {
                 user = it
@@ -75,5 +90,9 @@ class LoginActivity : AppCompatActivity() {
     fun goTo(activity: Class<*>) {
         val intent = Intent(this, activity)
         startActivity(intent)
+    }
+
+    override fun onBackPressed() {
+        finishAffinity()
     }
 }

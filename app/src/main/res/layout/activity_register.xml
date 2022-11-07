@@ -34,6 +34,15 @@
             android:textAlignment="center"
             android:textColorHint="#c2c2c2" />
 
+        <EditText
+            android:id="@+id/etUserSurname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/etUserSurnameHint"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHint="#c2c2c2" />
+
         <TextView
             android:id="@+id/tvUsernameErrorMessage"
             android:layout_width="wrap_content"
@@ -76,20 +85,11 @@
             android:textColor="@color/red"
             android:textSize="14sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="25dp">
-
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/tvRegisterText" />
-        </LinearLayout>
+            android:text="@string/tvRegisterText" />
 
         <TextView
             android:id="@+id/tvAlreadyAUser"

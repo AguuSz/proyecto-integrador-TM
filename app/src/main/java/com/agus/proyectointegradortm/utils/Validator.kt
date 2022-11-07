@@ -13,7 +13,6 @@ class Validator {
 
         fun isAValidPassword(password: String): Boolean {
             val pattern: Pattern = Pattern.compile("^" +
-                    "(?=.*[@#$%^&+=])" +     // at least 1 special character
                     "(?=\\S+$)" +            // no white spaces
                     ".{4,}" +                // at least 4 characters
                     "$");

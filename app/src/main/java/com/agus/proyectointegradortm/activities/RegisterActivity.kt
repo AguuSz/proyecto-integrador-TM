@@ -2,21 +2,29 @@ package com.agus.proyectointegradortm.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.text.Editable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.lifecycle.ViewModelProvider
+import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityRegisterBinding
+import com.agus.proyectointegradortm.models.User
 import com.agus.proyectointegradortm.utils.Validator
+import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.google.android.material.snackbar.Snackbar
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var userViewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         val view = binding.root
@@ -45,14 +53,20 @@ class RegisterActivity : AppCompatActivity() {
 
         if (Validator.isAValidEmail(email.toString()) && Validator.isAValidPassword(password.toString())) {
             // Significa que esta listo para ser creado
+            val userFirstname = userName.toString()
+            val userSurname = binding.etUserSurname.text.toString()
+            val userEmail = email.toString()
+            val userPassword = password.toString()
 
-            // TODO: Registrar usuario en la base de datos..
+            val user = User(0, userFirstname, userSurname, userEmail, userPassword, "00/00/0000", "Sin definir", "https://cdn-icons-png.flaticon.com/512/1160/1160040.png?w=360")
+            userViewModel.addUser(user)
 
             Snackbar.make(view, "Se ha registrado correctamente!", Snackbar.LENGTH_LONG).show()
 
-            // TODO: Importar HomeActivity aca abajo
-//            val intent = Intent(this, HomeActivity::class.java)
-//            startActivity(intent)
+            Handler().postDelayed({
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }, 1500)
         } else {
             Snackbar.make(view, "Los datos ingresados son invalidos!", Snackbar.LENGTH_LONG).show()
         }

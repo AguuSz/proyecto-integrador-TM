@@ -3,7 +3,8 @@
     <string name="tvLoginText">LOGIN</string>
     <string name="tvRegisterText">REGISTER</string>
     <string name="etEmailHint">Ingresa tu email</string>
-    <string name="etUsernameHint">Nombre de usuario</string>
+    <string name="etUsernameHint">Nombre</string>
+    <string name="etUserSurnameHint">Apellido</string>
     <string name="etPasswordHint">Password</string>
     <string name="tvForgotPasswordText">Olvidaste la password?</string>
     <string name="tvAlreadyAUser">Ya estas registrado? Inicia sesion</string>
