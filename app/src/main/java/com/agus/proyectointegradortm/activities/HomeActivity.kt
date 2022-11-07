@@ -4,12 +4,11 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.agus.proyectointegradortm.MyApplication
@@ -17,7 +16,9 @@ import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.adapters.TypesAdapter
 import com.agus.proyectointegradortm.databinding.ActivityHomeBinding
 import com.agus.proyectointegradortm.databinding.NavHeaderMainBinding
+import com.agus.proyectointegradortm.models.User
 import com.agus.proyectointegradortm.providers.UsersProvider
+import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 
@@ -26,12 +27,15 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
     private lateinit var binding: ActivityHomeBinding
+    private lateinit var userViewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
         drawerLayout = binding.drawerLayout
 
@@ -42,7 +46,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         actionBarToggle.syncState()
 
-        val user = UsersProvider.getUserByID(MyApplication.preferences.getUserID())
+        val user = userViewModel.getUserById(MyApplication.preferences.getUserID())
         navView = binding.navView
         navView.setNavigationItemSelectedListener(this)
         val headerView = navView.getHeaderView(0)
@@ -66,8 +70,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.fabShoppingCart.setOnClickListener {
             goTo(CartActivity::class.java)
         }
-
-
     }
 
     // Funcion para cuando se elige un elemento

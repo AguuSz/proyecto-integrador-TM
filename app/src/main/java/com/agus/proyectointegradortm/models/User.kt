@@ -2,8 +2,12 @@ package com.agus.proyectointegradortm.models
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "user")
 data class User(
+    @PrimaryKey(autoGenerate = true)
     var id: Int,
     var userName: String,
     var userSurname: String,
@@ -12,41 +16,4 @@ data class User(
     var birthDate: String,
     var address: String,
     var profileImage: String
-) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readInt(),
-        parcel.readString()!!,
-        parcel.readString()!!,
-        parcel.readString()!!,
-        parcel.readString()!!,
-        parcel.readString()!!,
-        parcel.readString()!!,
-        parcel.readString()!!
-    ) {
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeInt(id)
-        parcel.writeString(userName)
-        parcel.writeString(userSurname)
-        parcel.writeString(email)
-        parcel.writeString(password)
-        parcel.writeString(birthDate)
-        parcel.writeString(address)
-        parcel.writeString(profileImage)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<User> {
-        override fun createFromParcel(parcel: Parcel): User {
-            return User(parcel)
-        }
-
-        override fun newArray(size: Int): Array<User?> {
-            return arrayOfNulls(size)
-        }
-    }
-}
+)
