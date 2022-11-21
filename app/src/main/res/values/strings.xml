@@ -26,5 +26,6 @@
     <string name="forgotPasswordTitle">Haz olvidado la contraseña?</string>
     <string name="btnSubmitText">Enviar</string>
     <string name="toLoginText">Volver al login</string>
+    <string name="btnSave">Guardar</string>
 
 </resources>

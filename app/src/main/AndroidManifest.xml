@@ -77,6 +77,12 @@
             android:exported="true"
             android:parentActivityName=".activities.LoginActivity">
         </activity>
+        <!-- ChangePasswordScreen -->
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.SettingsActivity">
+        </activity>
         <!-- OrderScreen -->
         <activity
             android:name=".activities.OrderActivity"
