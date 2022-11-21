@@ -3,7 +3,6 @@ package com.agus.proyectointegradortm.activities
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
@@ -64,7 +63,6 @@ class ItemsActivity : AppCompatActivity(), Communicator {
         transaction.replace(binding.fragmentItems.id, fragment)
         transaction.commit()
     }
-
 
     // Funcion encargada de manejar el icono de busqueda
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

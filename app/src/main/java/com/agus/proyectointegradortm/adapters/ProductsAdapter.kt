@@ -13,9 +13,9 @@ import com.agus.proyectointegradortm.models.Product
 import com.bumptech.glide.Glide
 
 class ProductsAdapter(
-    private var productList: List<Product>,
     private val listener: ProductListOnClickListener
 ) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
+    private var productList = emptyList<Product>()
     private lateinit var context: Context
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context)

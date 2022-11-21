@@ -2,13 +2,17 @@ package com.agus.proyectointegradortm.models
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "product")
 data class Product(
+    @PrimaryKey(autoGenerate = true)
     var id: Int,
     var title: String = "Producto",
     var description: String = "No se detallo una descripcion para este producto",
     var price: Int,
-    var type: String,
+    var type: Int,
     var imageURL: String = "https://www.phswarnerhoward.co.uk/assets/images/no_img_avaliable.jpg"
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
@@ -16,7 +20,7 @@ data class Product(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readInt(),
-        parcel.readString()!!,
+        parcel.readInt(),
         parcel.readString()!!
     ) {
     }
@@ -26,7 +30,7 @@ data class Product(
         parcel.writeString(title)
         parcel.writeString(description)
         parcel.writeInt(price)
-        parcel.writeString(type)
+        parcel.writeInt(type)
         parcel.writeString(imageURL)
     }
 
