@@ -73,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (user != null && user!!.password == password.toString()) {
             if (binding.cbKeepLoggedIn.isChecked) {
-                MyApplication.preferences.setRemainingLogins(3)
+                MyApplication.preferences.setRemainingLogins(50)
             }
             if (binding.cbRememberEmail.isChecked) {
                 MyApplication.preferences.setUserEmail(email.toString())

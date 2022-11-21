@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.agus.proyectointegradortm.adapters.CartAdapter
 import com.agus.proyectointegradortm.databinding.ActivityCartBinding
 import com.agus.proyectointegradortm.models.Product
-import com.agus.proyectointegradortm.providers.ShoeProvider
 
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
@@ -24,7 +23,7 @@ class CartActivity : AppCompatActivity() {
         // RecyclerView handling
         val recyclerView = binding.rvCartProducts
         // TODO: Este provider de las zapatillas esta puesto de modo temporal solamente para tener items
-        cartProductList = ShoeProvider.shoeList.toMutableList()
+//        cartProductList = ShoeProvider.shoeList.toMutableList()
         adapter = CartAdapter(cartProductList)
 
         recyclerView.layoutManager = LinearLayoutManager(this)

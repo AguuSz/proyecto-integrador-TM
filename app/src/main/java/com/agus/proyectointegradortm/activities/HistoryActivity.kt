@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.agus.proyectointegradortm.adapters.ProductsAdapter
 import com.agus.proyectointegradortm.databinding.ActivityHistoryBinding
 import com.agus.proyectointegradortm.models.Product
-import com.agus.proyectointegradortm.providers.ShoeProvider
 
 class HistoryActivity : AppCompatActivity(), ProductsAdapter.ProductListOnClickListener {
 
@@ -23,8 +22,8 @@ class HistoryActivity : AppCompatActivity(), ProductsAdapter.ProductListOnClickL
         // RecyclerView handling
         val recyclerView = binding.rvHistoryProducts
         // TODO: Este provider de las zapatillas esta puesto de modo temporal solamente para tener items
-        historyProductList = ShoeProvider.shoeList.toMutableList()
-        adapter = ProductsAdapter(historyProductList, this)
+//        historyProductList = ShoeProvider.shoeList.toMutableList()
+        adapter = ProductsAdapter(this)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
