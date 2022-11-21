@@ -114,6 +114,10 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etUserBirthdate"
                         android:layout_width="match_parent"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
                         android:text="09/04/2002"
                         android:layout_height="wrap_content"/>
 
