@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.agus.proyectointegradortm.R
+import com.agus.proyectointegradortm.models.Category
+import com.agus.proyectointegradortm.models.Product
 
-class TypesAdapter (): RecyclerView.Adapter<TypesAdapter.ViewHolder>() {
-
-    val titles = arrayOf("Zapatillas", "Remeras", "Pantalones", "Buzos", "Camperas")
+class TypesAdapter (private var categoriesList: List<String>): RecyclerView.Adapter<TypesAdapter.ViewHolder>() {
 
     var onItemClick: ((String) -> Unit)? = null
 
@@ -20,15 +20,15 @@ class TypesAdapter (): RecyclerView.Adapter<TypesAdapter.ViewHolder>() {
 
     // Cuando puebla cada elemento
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemTitle.text = titles[i]
+        viewHolder.itemTitle.text = this.categoriesList[i]
 
         viewHolder.itemView.setOnClickListener {
-            onItemClick?.invoke(titles[i])
+            onItemClick?.invoke(this.categoriesList[i])
         }
     }
 
     override fun getItemCount(): Int {
-        return titles.size
+        return this.categoriesList.size
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

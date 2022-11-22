@@ -3,6 +3,7 @@ package com.agus.proyectointegradortm.activities
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -16,11 +17,14 @@ import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.adapters.TypesAdapter
 import com.agus.proyectointegradortm.databinding.ActivityHomeBinding
 import com.agus.proyectointegradortm.databinding.NavHeaderMainBinding
+import com.agus.proyectointegradortm.db.CategoryClient
 import com.agus.proyectointegradortm.models.User
 import com.agus.proyectointegradortm.providers.UsersProvider
+import com.agus.proyectointegradortm.viewModels.CategoryViewModel
 import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
+import kotlin.concurrent.thread
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
@@ -28,6 +32,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var navView: NavigationView
     private lateinit var binding: ActivityHomeBinding
     private lateinit var userViewModel: UserViewModel
+    private lateinit var categoryViewModel: CategoryViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +41,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(view)
 
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        categoryViewModel = ViewModelProvider(this).get(CategoryViewModel::class.java)
 
         drawerLayout = binding.drawerLayout
 
@@ -54,9 +60,11 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         Glide.with(view).load(user.profileImage).into(headerBinding.ivNavHeaderImage)
         headerBinding.tvNavHeaderTitle.text = user.userName + " " + user.userSurname
 
+        val categoriesList = categoryViewModel.getCategoriesList()
+
         // Recycler view con los 5 items
         val recyclerView: RecyclerView = binding.rvItemTypes
-        val adapter = TypesAdapter()
+        val adapter = TypesAdapter(categoriesList)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
