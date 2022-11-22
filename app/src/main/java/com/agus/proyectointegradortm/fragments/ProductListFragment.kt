@@ -75,7 +75,7 @@ class ProductListFragment() :
             "Pantalones" -> 3
             "Buzos" -> 1
             "Camperas" -> 2
-            else -> 5
+            else -> 6
         }
         return type
     }
