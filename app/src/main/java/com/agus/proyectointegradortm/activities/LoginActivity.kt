@@ -1,6 +1,7 @@
 package com.agus.proyectointegradortm.activities
 
 import android.content.Intent
+import android.media.browse.MediaBrowser.ConnectionCallback
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -18,6 +19,7 @@ import com.agus.proyectointegradortm.providers.UsersProvider
 import com.agus.proyectointegradortm.utils.Validator
 import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.google.android.material.snackbar.Snackbar
+import org.imaginativeworld.oopsnointernet.dialogs.signal.NoInternetDialogSignal
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -31,6 +33,20 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        // Este builder escanea constantemente si tiene conexion a internet para en caso de que no, mostrar un dialog y no permitirle continuar
+        NoInternetDialogSignal.Builder(this, lifecycle)
+            .apply {
+                dialogProperties.apply {
+                    cancelable = false // Optional
+                    noInternetConnectionTitle = "Sin Internet"
+                    noInternetConnectionMessage =
+                        "Revisa tu conexion a internet e intenta de nuevo."
+                    pleaseTurnOnText = "Enciende uno de los 2"
+                    showInternetOnButtons = true
+                    mobileDataOnButtonText = "4G"
+                }
+            }.build()
 
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         userViewModel.getAllUsers.observe(this, Observer { users ->

@@ -82,4 +82,7 @@ dependencies {
     // Libreria retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Libreria Oops-no-internet
+    implementation 'org.imaginativeworld.oopsnointernet:oopsnointernet:2.0.0'
 }
