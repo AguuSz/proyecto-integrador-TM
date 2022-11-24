@@ -82,7 +82,7 @@ class ProductListFragment() :
 
     fun onQueryChange(query: String) {
         val productListFiltered =
-            productList.filter { product -> product.title.contains(query.toString()) }
+            productList.filter { product -> product.title.lowercase().contains(query.lowercase()) }
         adapter.updateProductList(productListFiltered)
     }
 

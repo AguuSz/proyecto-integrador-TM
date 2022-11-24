@@ -10,7 +10,7 @@ import com.agus.proyectointegradortm.models.Product
 
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
-    private lateinit var cartProductList: MutableList<Product>
+    private lateinit var cartProductList: List<Product>
     private lateinit var adapter: CartAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +23,7 @@ class CartActivity : AppCompatActivity() {
         // RecyclerView handling
         val recyclerView = binding.rvCartProducts
         // TODO: Este provider de las zapatillas esta puesto de modo temporal solamente para tener items
+        cartProductList = emptyList<Product>()
 //        cartProductList = ShoeProvider.shoeList.toMutableList()
         adapter = CartAdapter(cartProductList)
 

@@ -1,21 +1,16 @@
 package com.agus.proyectointegradortm.activities
 
 import android.content.Intent
-import android.media.browse.MediaBrowser.ConnectionCallback
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.GravityCompat
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityLoginBinding
 import com.agus.proyectointegradortm.models.User
-import com.agus.proyectointegradortm.providers.UsersProvider
 import com.agus.proyectointegradortm.utils.Validator
 import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.google.android.material.snackbar.Snackbar
@@ -89,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (user != null && user!!.password == password.toString()) {
             if (binding.cbKeepLoggedIn.isChecked) {
-                MyApplication.preferences.setRemainingLogins(50)
+                MyApplication.preferences.setRemainingLogins(3)
             }
             if (binding.cbRememberEmail.isChecked) {
                 MyApplication.preferences.setUserEmail(email.toString())
