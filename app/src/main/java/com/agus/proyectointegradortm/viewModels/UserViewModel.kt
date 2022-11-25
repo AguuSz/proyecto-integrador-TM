@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.agus.proyectointegradortm.db.APIClient
 import com.agus.proyectointegradortm.db.UserDB
 import com.agus.proyectointegradortm.models.User
 import com.agus.proyectointegradortm.repositories.UserRepository

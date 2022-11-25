@@ -3,6 +3,7 @@ package com.agus.proyectointegradortm.activities
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
@@ -11,7 +12,9 @@ import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityLoginBinding
 import com.agus.proyectointegradortm.models.User
+import com.agus.proyectointegradortm.utils.APIConsumer
 import com.agus.proyectointegradortm.utils.Validator
+import com.agus.proyectointegradortm.viewModels.ProductViewModel
 import com.agus.proyectointegradortm.viewModels.UserViewModel
 import com.google.android.material.snackbar.Snackbar
 import org.imaginativeworld.oopsnointernet.dialogs.signal.NoInternetDialogSignal
@@ -19,6 +22,7 @@ import org.imaginativeworld.oopsnointernet.dialogs.signal.NoInternetDialogSignal
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var userViewModel: UserViewModel
+    private lateinit var productViewModel: ProductViewModel
     private var userList = emptyList<User>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +32,9 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        productViewModel = ViewModelProvider(this).get(ProductViewModel::class.java)
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
         // Este builder escanea constantemente si tiene conexion a internet para en caso de que no, mostrar un dialog y no permitirle continuar
         NoInternetDialogSignal.Builder(this, lifecycle)
@@ -43,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }.build()
 
-        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        populateDB()
         userViewModel.getAllUsers.observe(this, Observer { users ->
             userList = users
         })
@@ -63,6 +70,14 @@ class LoginActivity : AppCompatActivity() {
         binding.btnRegister.setOnClickListener {
             goTo(RegisterActivity::class.java)
         }
+    }
+
+    private fun populateDB() {
+        val userList = APIConsumer.getUsers()
+        val productList = APIConsumer.getProducts()
+
+        userViewModel.addUser(userList)
+        productViewModel.addProduct(productList)
     }
 
     private fun login(view: ConstraintLayout, email: Editable, password: Editable) {

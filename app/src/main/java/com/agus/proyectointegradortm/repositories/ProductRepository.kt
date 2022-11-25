@@ -19,6 +19,10 @@ class ProductRepository(private val productDAO: ProductDAO) {
         productDAO.addProduct(product)
     }
 
+    suspend fun addProduct(products: List<Product>) {
+        productDAO.addProduct(products)
+    }
+
     suspend fun updateProduct(product: Product) {
         productDAO.updateProduct(product)
     }

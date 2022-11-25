@@ -43,6 +43,12 @@ class ProductViewModel(application: Application): AndroidViewModel(application) 
         }
     }
 
+    fun addProduct(products: List<Product>) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.addProduct(products)
+        }
+    }
+
     fun updateProduct(product: Product) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateProduct(product)
