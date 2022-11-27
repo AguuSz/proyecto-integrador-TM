@@ -1,5 +1,6 @@
 package com.agus.proyectointegradortm.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.agus.proyectointegradortm.activities.CartActivity
 import com.agus.proyectointegradortm.adapters.ProductsAdapter
 import com.agus.proyectointegradortm.databinding.FragmentProductListBinding
 import com.agus.proyectointegradortm.models.Product
@@ -51,8 +53,8 @@ class ProductListFragment() :
         // Floating action button
         val floatingActionButton = binding.fabShoppingCart
         floatingActionButton.setOnClickListener {
-            Snackbar.make(binding.root, "El carrito se implementara pronto!", Snackbar.LENGTH_SHORT)
-                .show()
+            val intent = Intent(context, CartActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root

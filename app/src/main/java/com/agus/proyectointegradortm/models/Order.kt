@@ -8,6 +8,8 @@ data class Order (
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     var idUser: Int,
-//    var productsIdList: List<Int>,
-    var date: String
+    var products: String,
+    var date: String,
+    var price: Double,
+    var address: String
 )
