@@ -57,6 +57,7 @@ class OrderDetailFragment : Fragment(), ProductsAdapter.ProductListOnClickListen
             }
             adapter.updateProductList(productList)
         }
+        binding.fabShoppingCart.visibility = View.GONE
 
         return binding.root
     }
