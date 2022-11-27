@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.activities.CartActivity
 import com.agus.proyectointegradortm.adapters.ProductsAdapter
 import com.agus.proyectointegradortm.databinding.FragmentProductListBinding
@@ -47,7 +48,14 @@ class ProductListFragment() :
         communicator = activity as Communicator
 
         val title = arguments?.getString("title")
-        productList = productViewModel.getProductsByType(getTypeBasedOnTitle(title))
+
+        if (getTypeBasedOnTitle(title) == 10) {
+            // Productos destacados basados en el historial
+            productList = MyApplication.history
+        } else {
+            productList = productViewModel.getProductsByType(getTypeBasedOnTitle(title))
+        }
+
         adapter.updateProductList(productList)
 
         // Floating action button
@@ -77,6 +85,7 @@ class ProductListFragment() :
             "Pantalones" -> 3
             "Buzos" -> 1
             "Camperas" -> 2
+            "Destacados" -> 10
             else -> 6
         }
         return type

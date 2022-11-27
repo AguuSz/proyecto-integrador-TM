@@ -1,12 +1,18 @@
 package com.agus.proyectointegradortm.activities
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.agus.proyectointegradortm.MyApplication
+import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.adapters.CartAdapter
 import com.agus.proyectointegradortm.databinding.ActivityCartBinding
 import com.agus.proyectointegradortm.models.Order
@@ -15,6 +21,10 @@ import com.agus.proyectointegradortm.viewModels.OrderViewModel
 import com.agus.proyectointegradortm.viewModels.UserViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
+
+
+private const val CHANNEL_ID = "channel_id"
+private const val notificationId = 1
 
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
@@ -51,25 +61,60 @@ class CartActivity : AppCompatActivity() {
             Toast.makeText(this, "Se ha completado el pedido!", Toast.LENGTH_SHORT).show()
         }
 
+        createNotificationChannel()
+
     }
 
     private fun generateOrder(cartTotal: Double) {
-        val productsIDs = generateProductsString(MyApplication.cart)
-        val idUser = MyApplication.preferences.getUserID()
-        val currentDate = getCurrentDateAsString()
-        val address = getUserAddress()
-        var order = Order(
-            0,
-            idUser,
-            productsIDs,
-            currentDate,
-            cartTotal,
-            address
-        )
+        if (MyApplication.cart.size > 0) {
+            val productsIDs = generateProductsString(MyApplication.cart)
+            val idUser = MyApplication.preferences.getUserID()
+            val currentDate = getCurrentDateAsString()
+            val address = getUserAddress()
+            var order = Order(
+                0,
+                idUser,
+                productsIDs,
+                currentDate,
+                cartTotal,
+                address
+            )
 
-        orderViewModel.addOrder(order)
-        MyApplication.cart.clear()
-        finish()
+            orderViewModel.addOrder(order)
+            pushNotification()
+            MyApplication.cart.clear()
+            finish()
+        } else {
+            Toast.makeText(this, "El carrito esta vacio!", Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
+    private fun pushNotification() {
+        val builder = NotificationCompat.Builder(MyApplication.appContext, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_shopping_cart)
+            .setContentTitle("Orden confirmada")
+            .setContentText("Haz generado un pedido exitosamente!")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setAutoCancel(true)
+
+        with(NotificationManagerCompat.from(MyApplication.appContext)) {
+            notify(notificationId, builder.build())
+        }
+    }
+
+    private fun createNotificationChannel() {
+        val name = "Order confirmation"
+        val descriptionText = "Order confirmation"
+        val importance = NotificationManager.IMPORTANCE_DEFAULT
+
+        val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
+            description = descriptionText
+        }
+
+        val notificationManager: NotificationManager =
+           getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
     }
 
     private fun getUserAddress(): String {

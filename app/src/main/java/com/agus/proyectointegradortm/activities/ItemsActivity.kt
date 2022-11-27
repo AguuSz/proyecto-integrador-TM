@@ -7,6 +7,7 @@ import android.view.Menu
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.agus.proyectointegradortm.MyApplication
 import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityItemsBinding
 import com.agus.proyectointegradortm.fragments.ProductDetailFragment
@@ -47,6 +48,7 @@ class ItemsActivity : AppCompatActivity(), Communicator {
         productDetailFragment.arguments = bundle
         replaceFragment(productDetailFragment)
         isDetailShown = true
+        MyApplication.history.add(product)
     }
 
     override fun onBackPressed() {
