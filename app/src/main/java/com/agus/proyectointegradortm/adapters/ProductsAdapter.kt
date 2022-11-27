@@ -17,6 +17,7 @@ class ProductsAdapter(
 ) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
     private var productList = emptyList<Product>()
     private lateinit var context: Context
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.product_element, viewGroup, false)
