@@ -12,6 +12,7 @@ import com.agus.proyectointegradortm.R
 import com.agus.proyectointegradortm.databinding.ActivityItemsBinding
 import com.agus.proyectointegradortm.fragments.ProductDetailFragment
 import com.agus.proyectointegradortm.fragments.ProductListFragment
+import com.agus.proyectointegradortm.models.Order
 import com.agus.proyectointegradortm.models.Product
 import com.agus.proyectointegradortm.utils.Communicator
 
@@ -49,6 +50,10 @@ class ItemsActivity : AppCompatActivity(), Communicator {
         replaceFragment(productDetailFragment)
         isDetailShown = true
         MyApplication.history.add(product)
+    }
+
+    override fun passDataCom(order: Order) {
+
     }
 
     override fun onBackPressed() {

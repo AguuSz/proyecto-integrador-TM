@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.agus.proyectointegradortm.MyApplication
@@ -16,7 +15,6 @@ import com.agus.proyectointegradortm.databinding.FragmentProductListBinding
 import com.agus.proyectointegradortm.models.Product
 import com.agus.proyectointegradortm.utils.Communicator
 import com.agus.proyectointegradortm.viewModels.ProductViewModel
-import com.google.android.material.snackbar.Snackbar
 
 class ProductListFragment() :
     Fragment(), ProductsAdapter.ProductListOnClickListener {
