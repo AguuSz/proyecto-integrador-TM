@@ -3,7 +3,6 @@ package com.agus.proyectointegradortm.activities
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
@@ -100,6 +99,8 @@ class LoginActivity : AppCompatActivity() {
         if (user != null && user!!.password == password.toString()) {
             if (binding.cbKeepLoggedIn.isChecked) {
                 MyApplication.preferences.setRemainingLogins(3)
+            } else {
+                MyApplication.preferences.setRemainingLogins(0)
             }
             if (binding.cbRememberEmail.isChecked) {
                 MyApplication.preferences.setUserEmail(email.toString())

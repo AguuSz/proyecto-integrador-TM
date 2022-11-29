@@ -85,4 +85,7 @@ dependencies {
 
     // Libreria Oops-no-internet
     implementation 'org.imaginativeworld.oopsnointernet:oopsnointernet:2.0.0'
+
+    // Libreria Biometrics Authentication in Android
+    implementation "androidx.biometric:biometric:1.2.0-alpha04"
 }
