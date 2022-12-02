@@ -37,7 +37,7 @@ Link de youtube: https://youtu.be/XfHxxqk8BhY
 ## Herramientas extras utilizadas
 
 ### Trello
-![Trello](https://user-images.githubusercontent.com/63722332/198418062-d6e42769-61f9-4515-b3de-ec8c0d852cb9.png)
+![Trello](https://imgur.com/VW5I3y2)
 
 ### Excalidraw
 ![Excalidraw](https://user-images.githubusercontent.com/63722332/198418113-17e8a44b-8e94-4f03-bb37-bce4e394c591.png)
