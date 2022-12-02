@@ -32,7 +32,7 @@ Algunas cosas a considerar son:
 - Android 8.0 (Oreo)
 
 ## Demo
-![Link de youtube](https://youtu.be/XfHxxqk8BhY)
+Link de youtube: https://youtu.be/XfHxxqk8BhY
 
 ## Herramientas extras utilizadas
 
